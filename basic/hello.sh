@@ -2,4 +2,4 @@
 
 echo "Hello, world !"
 
-# The echo command is userd to display(print) text or variables in the terminal
+# The echo command is used to display(print) text or variables in the terminal
