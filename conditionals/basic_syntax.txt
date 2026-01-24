@@ -1,0 +1,53 @@
+1.) Basic syntax
+
+============================
+if [ condition ]; then
+    commands    
+elif [ condition ]; then
+    commands
+else
+    commands
+fi
+
+============================
+
+Every if must be closed with fi.
+
+Conditions are inside [ ] with spaces around them.
+
+Strings and numbers are treated differently.
+===================================================
+
+
+2. Comparing Numbers
+-------------------------------
+| Operator | Meaning          |
+| -------- | ---------------- |
+| `-eq`    | equal            |
+| `-ne`    | not equal        |
+| `-lt`    | less than        |
+| `-le`    | less or equal    |
+| `-gt`    | greater than     |
+| `-ge`    | greater or equal |
+-------------------------------
+
+================================
+
+3. Comparing Strings
+----------------------------------
+| Operator | Meaning             |
+| -------- | ------------------- |
+| `=`      | equal               |
+| `!=`     | not equal           |
+| `-z`     | string is empty     |
+| `-n`     | string is not empty |
+----------------------------------
+
+
+==================================
+4. Combining Conditions
+
+AND: &&
+
+OR: ||
+------------------------------------
