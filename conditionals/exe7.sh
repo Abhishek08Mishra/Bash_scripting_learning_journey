@@ -7,7 +7,7 @@
 read -p "Enter your age : " age
 
 # Validate input
-if ! [[ "$age" =~ ^-?[0-9]+$ ]]; then
+if ! [[ "$age" =~ ^[0-9]+$ ]]; then
 	echo "Please enter a valid number."
 	exit 1
 fi
