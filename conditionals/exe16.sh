@@ -1,12 +1,11 @@
 #!/bin/bash
 
-#**Exercise 15 — Simple Menu**
-#  Create a menu:
+# Exercise Simple Menu
+# Create a menu:
 # 1. Say Hello
 # 2. Show Date 
 # 3. Exit
 # Ask user to choose an option and respond accordingly.
-# Focus:* Combining input, conditionals, and multiple options
 
 echo "Select an option ; "
 echo " 1.) Greetings"
