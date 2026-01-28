@@ -1,33 +1,6 @@
 #!/bin/bash
 
-## 🔹 Exercise : File Inspector
-
-# **Goal:** Nested file condition checks
-
-#  Ask the user for a filename and then:
-
-#1. If the file **exists**
-
-#   * If it is a **regular file**
-#
- #    * Check if it is **readable**
-
-#       * If yes → “File exists and is readable”
- #      * If no → “File exists but is not readable”
-  # * Else if it is a **directory**
-#
- #    * → “It’s a directory, not a regular file”
-#2. Else
-#
- #  * → “File does not exist”
-
-#*Hints:* Use:
-
-#* `-e` (exists)
-#* `-f` (regular file)
-#* `-d` (directory)
-#* `-r` (readable)
-
+# Exercise : File Inspector
 
 read -p "Enter your filename:" fname
 
@@ -40,6 +13,8 @@ if [[ -e "$fname" ]]; then
 		fi
 	elif [[ -d "$fname" ]]; then
 		echo "Yes, it's a directory, not a regular file."
+	else 
+		echo "The path exists but is neither a regular file nor a directory."
 	fi
 else
 	echo "File does not exist."

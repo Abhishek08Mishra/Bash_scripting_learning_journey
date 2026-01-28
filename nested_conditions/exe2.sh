@@ -1,17 +1,15 @@
 #!/bin/bash
 
-## Exercise --> Login Access System
-
+# Exercise --> Login Access System
 # Create a script that:
 # 1. Asks for:
   #  Username
   #  Password
-  
 # 2. If the username is `"admin"`
 #   Then check if the password is `"root123"`
 #   If yes → “Full access granted”
 #    If no → “Wrong password”
-#3. Else
+# 3. Else
 #  If username is `"guest"`
 #  → “Guest access only”
 #   Otherwise → “Unknown user”
