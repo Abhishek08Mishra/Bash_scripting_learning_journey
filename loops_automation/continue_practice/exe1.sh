@@ -7,8 +7,6 @@
 # 3) Exit
 # Loop forever until user selects 3, then use break to stop.
 
-#!/bin/bash
-
 while true; do
 	echo
 	echo "	********	"
@@ -23,7 +21,7 @@ while true; do
 	read -p "Enter your option from the above Menu: " userinput
 	echo
 
-	# Reject non-numeric input (like 5k, abc, etc.)
+	# Reject non-numeric input (like 5k, abc, etc..)
 	if ! [[ "$userinput" =~ ^[0-9]+$ ]]; then
 		echo "======================================================"
 		echo "Please enter a valid option from the menu (eg; 1,2,3)"
