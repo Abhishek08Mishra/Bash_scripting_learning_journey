@@ -1,0 +1,142 @@
+# 📝 Bash `case` Statement Reference
+
+# Purpose
+
+# The `case` statement is used for **pattern matching**. It’s like a flexible `if…elif…else`, ideal for menus, input validation, or handling multiple options cleanly.
+
+
+
+# Basic Syntax
+
+case WORD in
+  PATTERN1)
+    COMMANDS
+    ;;
+  PATTERN2)
+    COMMANDS
+    ;;
+  *)
+    COMMANDS_FOR_DEFAULT
+    ;;
+esac
+
+
+# Parts Explained
+
+	* `WORD` → the variable or value you want to match
+	* `PATTERN` → a string, number, or pattern to match (supports `|` for multiple matches)
+	* `COMMANDS` → the commands to execute if the pattern matches
+	* `;;` → ends that case block
+	* `*` → default case (like `else`)
+
+
+# Example 1: Simple Menu
+
+
+#!/bin/bash
+
+echo "Choose an option:"
+echo "1) Start"
+echo "2) Stop"
+echo "3) Restart"
+
+read choice
+
+case $choice in
+  1)
+    echo "Starting..."
+    ;;
+  2)
+    echo "Stopping..."
+    ;;
+  3)
+    echo "Restarting..."
+    ;;
+  *)
+    echo "Invalid choice"
+    ;;
+esac
+
+
+## Example 2: Multiple Matches & Case-Insensitive Input 
+
+read choice
+
+case ${choice,,} in   # converts input to lowercase
+  start|1)
+    echo "Starting..."
+    ;;
+  stop|2)
+    echo "Stopping..."
+    ;;
+  restart|3)
+    echo "Restarting..."
+    ;;
+  q|quit|exit)
+    echo "Goodbye!"
+    exit 0
+    ;;
+  *)
+    echo "Invalid choice"
+    ;;
+esac
+
+
+Notes:
+
+	* `${choice,,}` → converts input to lowercase, so `START` or `start` both work
+	* `start|1)` → matches **either** `start` or `1`
+	* `q|quit|exit)` → supports multiple “quit” options
+
+
+
+# Tips & Best Practices
+
+1. Always end each pattern block with `;;`
+2. Use `*` as a **catch-all default case**
+3. Use `|` to match multiple possible values for the same block
+4. To make it **case-insensitive**, use `${VAR,,}` (or `${VAR^^}` for uppercase)
+5. `case` works nicely inside loops for **menu-driven scripts**
+6. Keep your patterns simple; wildcards like `*`, `?`, and `[]` work if needed
+
+
+# Example 3: Looping Menu
+
+
+#!/bin/bash
+
+while true; do
+  echo "Choose an option:"
+  echo "1) Start"
+  echo "2) Stop"
+  echo "3) Restart"
+  echo "q) Quit"
+
+  read choice
+
+  case ${choice,,} in
+    start|1)
+      echo "Starting..."
+      ;;
+    stop|2)
+      echo "Stopping..."
+      ;;
+    restart|3)
+      echo "Restarting..."
+      ;;
+    q|quit|exit)
+      echo "Goodbye!"
+      exit 0
+      ;;
+    *)
+      echo "Invalid choice"
+      ;;
+  esac
+done
+
+
+✅ Advantages:
+
+	* Keeps the menu active until quit
+	* Handles invalid input gracefully
+	* Accepts multiple inputs for each option
