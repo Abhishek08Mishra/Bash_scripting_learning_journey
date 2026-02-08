@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ------------------------------------------------------------
-# Task 5: Process Menu
+# Task 7: Process Menu
 # Goal: Learn process management
 # Instructions:
 # 1. Menu:
