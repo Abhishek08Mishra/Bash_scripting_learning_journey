@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ------------------------------------------------------------
-# Task 2: Network Tools Menu
+# Task 4: Network Tools Menu
 # Goal: Learn networking basics
 # Instructions:
 # 1. Menu:

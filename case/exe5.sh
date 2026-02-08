@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ------------------------------------------------------------
-# Task 3: File Operations Menu
+# Task 5: File Operations Menu
 # Goal: Practice file commands with case
 # Instructions:
 # 1. Menu:

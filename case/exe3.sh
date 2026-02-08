@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ------------------------------------------------------------
-# Task 1: Disk Usage Menu
+# Task 3: Disk Usage Menu
 # Goal: Learn `case` and basic system commands
 # Instructions:
 # 1. Show this menu:
