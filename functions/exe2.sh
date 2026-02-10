@@ -23,3 +23,9 @@ is_even() {
 	fi
 }
 is_even 8
+echo $?
+
+echo
+
+is_even 19
+echo $?
