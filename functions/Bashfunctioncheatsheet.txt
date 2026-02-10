@@ -1,0 +1,112 @@
+# =============================
+# BASH FUNCTIONS CHEAT SHEET
+# =============================
+
+# --------------------------------------------------------------------------------------------------
+# 1. Function Definition --> A function is a reusable block of code that does one thing. Instead of writing the same commands multiple times, you put them in a function and call it whenever you need.
+# ---------------------------------------------------------------------------------------------------
+
+# Syntax 1:
+# function name {
+#    commands
+# }
+
+
+# Syntax 2 (short):
+# name() {
+#    commands
+# }
+
+# Define function
+#say_hello() {
+#    echo "Hello!"
+#}
+
+# Call function
+# say_hello
+
+
+
+# Example:
+# greet() {
+    echo "Hello, $1!"  # $1 = first argument
+}
+greet Alice   # Call function
+
+# -----------------------------
+# 2. Parameters / Arguments
+# -----------------------------
+# $1, $2, ... = positional arguments
+# $@          = all arguments
+# $#          = number of arguments
+# Example:
+sum() {
+    echo $(( $1 + $2 ))
+}
+result=$(sum 5 7)
+echo "Result: $result"  # Output: 12
+
+# -----------------------------
+# 3. Return Values
+# -----------------------------
+# return → number 0-255 (status code)
+# echo → string or bigger numbers
+is_even() {
+    (( $1 % 2 == 0 )) && return 0 || return 1
+}
+is_even 4
+echo $?  # 0 = success
+
+square() {
+    echo $(( $1 * $1 ))
+}
+sq=$(square 6)
+echo "Square: $sq"  # Output: 36
+
+# -----------------------------
+# 4. Local Variables
+# -----------------------------
+# local → keep variable inside function
+my_func() {
+    local name=$1
+    echo "Inside: $name"
+}
+my_func "Charlie"
+echo "Outside: $name"  # empty
+
+# -----------------------------
+# 5. Practical Functions
+# -----------------------------
+
+# 5a) Logging
+log() {
+    local msg=$1
+    echo "$(date '+%Y-%m-%d %H:%M:%S') : $msg"
+}
+log "Backup started"
+
+# 5b) Input Validation
+is_file_exist() {
+    local file=$1
+    [[ -f $file ]] && return 0 || return 1
+}
+if is_file_exist "/etc/passwd"; then echo "File exists!"; fi
+
+# 5c) Reusable Backup
+backup() {
+    local src=$1 dest=$2
+    [[ -d $src ]] && cp -r "$src" "$dest" && echo "Backup done" || echo "Source missing"
+}
+backup "/home/user/docs" "/home/user/backup"
+
+# -----------------------------
+# 6. Tips & Best Practices
+# -----------------------------
+# - Functions = reusable & clean code
+# - Always use $1, $2, $@ for inputs
+# - Use echo for output, return for status
+# - Use local variables to avoid conflicts
+# - Name functions clearly (verb_first = good)
+# - Keep functions short & single-purpose
+# - Call functions by name with arguments
+# - Combine functions to modularize scripts
