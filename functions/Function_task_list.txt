@@ -1,0 +1,63 @@
+# ===============================
+# BASH FUNCTION PRACTICE TASKS
+# REAL-WORLD & SYSTEM RELATED
+# ===============================
+
+# -------------------------------
+# LEVEL 1 — System Awareness
+# -------------------------------
+# Task 1: Function to print hostname
+# Task 2: Function to print current user
+# Task 3: Function to print system uptime
+# Task 4: Function to print current date & time
+# Task 5: Function to print OS name and kernel version
+
+# -------------------------------
+# LEVEL 2 — Files & Directories
+# -------------------------------
+# Task 6: Function to check if a file exists
+# Task 7: Function to check if a directory exists
+# Task 8: Function to count number of files in a directory
+# Task 9: Function to print file size in human-readable format
+# Task 10: Function to create a directory only if it doesn’t exist
+
+# -------------------------------
+# LEVEL 3 — Permissions & Safety
+# -------------------------------
+# Task 11: Function to check if a file is readable
+# Task 12: Function to check if a file is executable
+# Task 13: Function to safely change permissions after confirmation
+# Task 14: Function to find files larger than X MB
+# Task 15: Function to find files modified in last N days
+
+# -------------------------------
+# LEVEL 4 — Processes & System Health
+# -------------------------------
+# Task 16: Function to check if a process is running
+# Task 17: Function to print top 5 memory-using processes
+# Task 18: Function to print CPU usage
+# Task 19: Function to check disk usage and warn if >80%
+# Task 20: Function to check free RAM and print alert if low
+
+# -------------------------------
+# LEVEL 5 — Networking & Services
+# -------------------------------
+# Task 21: Function to check if a port is open
+# Task 22: Function to check internet connectivity
+# Task 23: Function to ping a host and log the result
+# Task 24: Function to check if a service is active
+# Task 25: Function to restart a service only if it is down
+
+# -------------------------------
+# LEVEL 6 — Automation & Maintenance
+# -------------------------------
+# Task 26: Function to create timestamped backup of a directory
+# Task 27: Function to clean log files older than N days
+# Task 28: Function to archive a directory safely
+# Task 29: Function to monitor a directory for changes
+# Task 30: Master Task: Create a system health script that
+#           - uses multiple functions
+#           - uses logging
+#           - validates input
+#           - checks disk, memory, CPU, and services
+#           - prints a final health summary
