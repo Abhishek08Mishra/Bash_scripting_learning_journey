@@ -7,12 +7,12 @@ check_file_size() {
 	read -rp "Enter file path : " path
 	
 	# Path validation
-	if ! [[ -e "$path" ]]; then
-		echo "Invalid path selection"
+	if ! [[ -d "$path" ]]; then
+		echo "Invalid path"
 		return 1
 	fi
 	
-	# list all files >1MB in the directory, show their size in MB, and sort largest first.	
+	# list all files >50MB in the directory, show their size in MB, and sort largest first.	
 	local filesize="$(find "$path" -type f -size +50M -exec du -BM {} + | sort -n)"
 	
 	echo "$filesize"
