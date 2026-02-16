@@ -192,6 +192,8 @@ while true; do
 	echo "	============================================="
 	echo "			HexShell v1.0		     "
 	echo " 	Command the system, unseen and unstoppable.  "
+	echo
+	echo " 		     Author: Abhishek Mishra	     	     "
 	echo "	============================================="
 	echo
 	echo "Select an option"
