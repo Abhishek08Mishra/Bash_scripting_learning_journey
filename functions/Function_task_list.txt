@@ -47,17 +47,3 @@
 # Task 23: Function to ping a host and log the result
 # Task 24: Function to check if a service is active
 # Task 25: Function to restart a service only if it is down
-
-# -------------------------------
-# LEVEL 6 — Automation & Maintenance
-# -------------------------------
-# Task 26: Function to create timestamped backup of a directory
-# Task 27: Function to clean log files older than N days
-# Task 28: Function to archive a directory safely
-# Task 29: Function to monitor a directory for changes
-# Task 30: Master Task: Create a system health script that
-#           - uses multiple functions
-#           - uses logging
-#           - validates input
-#           - checks disk, memory, CPU, and services
-#           - prints a final health summary
