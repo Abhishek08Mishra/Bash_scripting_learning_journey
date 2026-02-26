@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 # Task 21: Function to check if a port is open
 
 check_open_port() {
