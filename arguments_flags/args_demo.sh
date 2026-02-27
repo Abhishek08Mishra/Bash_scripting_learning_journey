@@ -6,6 +6,14 @@ echo "Second arguments : $2"
 echo "All Arguments : $@"
 echo "Number of arguments $#"
 
+# Input validation
+if [[ $# -lt 2 ]]; then
+	echo "Error: you must provide 2 arguments at least"
+	exit 1
+fi
+
+echo "Arguments looks good"
+exit 0
 
 # output :
 # ---> ./args_demo.sh apple banana orange
